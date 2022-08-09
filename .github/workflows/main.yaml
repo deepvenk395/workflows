@@ -1,0 +1,13 @@
+.github/workflows/main.yaml  file and copy the following content inside:
+
+on: [push]
+
+jobs:
+  dependency_analysis:
+    runs-on:  ubuntu-latest
+    name: Test dependencies for security flaws
+    steps:
+      - uses: actions/checkout@v2
+      - name:
+        run: pip3 install pyraider && pyraider go
+        shell: bash
