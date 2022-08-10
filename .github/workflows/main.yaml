@@ -9,11 +9,3 @@ jobs:
       - name:
         run: pip3 install pyraider && pyraider go
         shell: bash
-  code_analysis:
-    runs-on:  ubuntu-latest
-    name: Analyse code for security flaws
-    steps:
-      - uses: actions/checkout@v2
-      - name: Code Security Analysis
-        run: pip3 install bandit && bandit python_test
-        shell: bash
